@@ -16,17 +16,11 @@ test('GET/ reviews debe retornar todo los reviews ', async () => {
     const res = await request(app)
        .get('/reviews')
        .set('Authorization', `Bearer ${token}`)
-    console.log(res.body)
     expect(res.status).toBe(200);
 
 });
 
-// test('GET /reviews', async () => {
-//     const res = await request(app)
-//         .get('/reviews')
-//         .set('Authorization', `Bearer ${token}`)
-//     expect(res.status).toBe(200);
-// });
+
 
 test('POST /reviews', async () => {
     const body = {
